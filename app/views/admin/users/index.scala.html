@@ -1,0 +1,94 @@
+@()
+
+@admin.app("Users") {
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Users</h1>
+    </div>
+
+    <div class="row">
+
+            <!-- Area Chart -->
+        <div class="col-xl-8 col-lg-7">
+            <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">List of Users</h6>
+                </div>
+                    <!-- Card Body -->
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-borderless table-striped">
+                            <thead>
+                                <tr>
+                                    <th>SNo</th>
+                                    <th>Name</th>
+                                    <th>User ID</th>
+                                    <th>Email</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Jane Doe</td>
+                                    <td>2354126</td>
+                                    <td>janedoes@@gmail.com</td>
+                                    <td><button class="btn btn-primary btn-sm"><span class="fa fa-eye"></span></button></td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td colspan="6">No User Found</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- Pie Chart -->
+        <div class="col-xl-4 col-lg-5">
+            <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Create New User</h6>
+                </div>
+                    <!-- Card Body -->
+                <div class="card-body">
+                    <form method="POST">
+
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control"
+                            name="name" value="" placeholder="Jane Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control"
+                            name="email"value="" placeholder="janedoe@@gmail.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control"
+                            name="password" placeholder="Enter Password" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Confirm Password</label>
+                            <input type="password" class="form-control"
+                            name="password_confirmation" placeholder="Re-enter Password" required>
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary btn-block">Create</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
